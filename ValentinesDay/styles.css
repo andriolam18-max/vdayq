@@ -149,6 +149,31 @@ body {
   background: transparent;
 }
 
+.yes-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.85);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.yes-overlay.is-visible {
+  display: flex;
+}
+
+.yes-photo {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
 #confetti-canvas {
   position: fixed;
   top: 0;

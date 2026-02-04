@@ -115,8 +115,14 @@
     draw();
   }
 
+  const yesOverlay = document.getElementById('yes-overlay');
+
   function onYes() {
     btnYes.disabled = true;
+    if (yesOverlay) {
+      yesOverlay.classList.add('is-visible');
+      yesOverlay.setAttribute('aria-hidden', 'false');
+    }
     runConfetti();
     setTimeout(function () {
       window.location.reload();
